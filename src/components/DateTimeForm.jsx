@@ -27,7 +27,7 @@ const DateTimeForm = ({ control, id, label }) => {
         name={id}
         render={({ field }) => (
           <FormItem className="flex flex-col py-3">
-            <FormLabel>Date of birth</FormLabel>
+            
             <Popover>
               <PopoverTrigger asChild>
                 <FormControl>
@@ -47,7 +47,7 @@ const DateTimeForm = ({ control, id, label }) => {
                 </FormControl>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="start">
-                <Calendar
+                {/* <Calendar
                   mode="single"
                   selected={field.value}
                   onSelect={field.onChange}
@@ -55,7 +55,23 @@ const DateTimeForm = ({ control, id, label }) => {
                     date > new Date() || date < new Date("1900-01-01")
                   }
                   initialFocus
+                /> */}
+
+                <Calendar
+                  mode="single"
+                  selected={field.value}
+                  onSelect={field.onChange}
+                  disabled={(date) =>
+                    date.getTime() < new Date("1900-01-01").getTime() || 
+                    date.getTime() < new Date().setHours(0, 0, 0, 0) // Disable past dates
+                  }
+                  initialFocus
                 />
+
+
+
+
+
               </PopoverContent>
             </Popover>
           </FormItem>

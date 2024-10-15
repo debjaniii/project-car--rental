@@ -80,7 +80,7 @@ const StepFour = ({ form }) => {
           </div>
 
           <button
-            className="bg-third-color text-white font-bold w-full py-2.5 px-4 rounded-md"
+            className="bg-secondary-color text-white font-bold w-full py-2.5 px-4 rounded-md"
             onClick={Submit}
           >
             Pay Now

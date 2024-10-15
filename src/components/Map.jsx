@@ -15,6 +15,10 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow.src,
 });
 const Map = ({ getSource, getDestination }) => {
+
+ 
+
+
   return (
     <MapContainer
       center={getSource || [51.505, -0.09]}
@@ -27,7 +31,7 @@ const Map = ({ getSource, getDestination }) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {getSource && <Marker position={getSource} />}
-      {getDestination && <Marker position={getDestination} />}
+      {getDestination && <Marker position={getDestination}/>}
     </MapContainer>
   );
 };

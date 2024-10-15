@@ -60,7 +60,7 @@ const Booking = ({ searchParams }) => {
         <button className="bg-slate-100 px-10 py-3 rounded-full">Back</button>
         <Link
           href={`/booking?index=${current + 1}`}
-          className="bg-third-color text-white px-10 py-3 rounded-full"
+          className="bg-secondary-color text-white px-10 py-3 rounded-full"
         >
           Next
         </Link>

@@ -6,6 +6,7 @@ import connect from "./database";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export const PaymentMethod = async (body) => {
+  console.log(body);
   try {
     await connect();
     const newOrder = await Order.create(body);
@@ -18,6 +19,7 @@ export const PaymentMethod = async (body) => {
             name: body.title,
           },
           unit_amount: body.price * 100,
+         
         },
         quantity: 1,
       },
@@ -35,6 +37,6 @@ export const PaymentMethod = async (body) => {
   } catch (error) {
     console.log("something went wrong");
     console.error("Error:", error.message);
-  console.error("Stack Trace:", error.stack);
+    console.error("Stack Trace:", error.stack);
   }
 };
