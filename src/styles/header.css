@@ -50,8 +50,18 @@
 
 
 /*=======================================================header middle========================================================= */
+.header_top_right a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.header_top_right a:hover {
+    color: #f9a826;
+}
+
 .header__middle {
-    padding: 10px 0px;
+    padding: 20px 0px;
     line-height: 1rem ;
 }
 
@@ -66,7 +76,7 @@
 
 .logo h1 a {
     text-decoration: none;
-    color: #42275a ;
+    color: #e0e0e0 ;
     font-weight: 700;
 }
 
@@ -76,26 +86,29 @@
 
 .header_location span i {
     font-size: 2.2rem;
-    color: #42275a ;
+    color: #e0e0e0 ;
+    /* color: #42275a ; */
 }
 
 .header_location-content h4 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #42275a ;
+    color: #e0e0e0;
 }
 
 .header_location-content h6 {
     font-weight: 500;
+    color: #adaaaa;
     
 }
 
 .header_btn {
-    background: linear-gradient(#42275a , #734b6d) !important;
-    padding: 10px 20px;
+    background: linear-gradient(109.6deg, rgb(245, 239, 249) 30.1%, rgb(207, 211, 236) 100.2%) !important;
+    padding: 10px 40px;
     bottom: none;
     outline: none;
     border-radius: 5px;
+    
 }
 
 .header_btn a {
@@ -103,9 +116,10 @@
     align-items: center;
     column-gap: 0.4rem;
     text-decoration: none;
-    color: #fff;
+    color: #42275a;
     justify-content: end;
     font-size: 0.9rem;
+    font-weight: 600;
 }
 
 /* =======================================================main navigation========================================================= */
