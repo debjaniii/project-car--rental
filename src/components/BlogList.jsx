@@ -10,12 +10,17 @@ const BlogList = () => {
         <Container>
           <Row>
             <Col lg="12" className="mt-5 text-center">
-              <h6 className="section__subtitle">Explore our blogs</h6>
+              <h6 className="section__subtitle">Welcome to our blogs</h6>
               <h2 className="section__title">Latest Blogs</h2>
             </Col>
           </Row>
         </Container>
         <Row className='mx-5'>
+            {blogData.map((item) => (
+                <BlogItem item={item} key={item.id} />
+            ))}
+            </Row>
+            <Row className='mx-5'>
             {blogData.map((item) => (
                 <BlogItem item={item} key={item.id} />
             ))}
@@ -42,23 +47,23 @@ const BlogItem = ({ item }) => {
                             : item.description}
                     </p>
 
-                    <Link href={`/blogs/${item.title}`} className="read__more">
+                    {/* <Link href={`/blogs/${item.title}`} className="read__more">
                         Read More
-                    </Link>
+                    </Link> */}
 
                     <div className="blog__time pt-3 mt-3 d-flex align-items-center justify-content-between">
-                        <span className="blog__author">
+                        {/* <span className="blog__author">
                             <i class="ri-user-line"></i> {item.author}
-                        </span>
+                        </span> */}
 
                         <div className=" d-flex align-items-center gap-3">
-                            <span className=" d-flex align-items-center gap-1 text-[#7c8a97] text-[0.9rem] leading-[30px]">
+                            {/* <span className=" d-flex align-items-center gap-1 text-[#7c8a97] text-[0.9rem] leading-[30px]">
                                 <i class="ri-calendar-line"></i> {item.date}
-                            </span>
+                            </span> */}
 
-                            <span className=" d-flex align-items-center gap-1 text-[#7c8a97] text-[0.9rem] leading-[30px]">
+                            {/* <span className=" d-flex align-items-center gap-1 text-[#7c8a97] text-[0.9rem] leading-[30px]">
                                 <i class="ri-time-line"></i> {item.time}
-                            </span>
+                            </span> */}
                         </div>
                     </div>
                 </div>
