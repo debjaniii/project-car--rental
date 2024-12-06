@@ -1,149 +1,79 @@
-// import React, { useEffect } from "react";
-// import { Container, Row, Col, Form, FormGroup, Input } from "reactstrap";
-// import { useRouter } from "next/router"; // Import useRouter from next/router
-// import {blogData} from "@/contants/appdata";
-// import Link from "next/link"; // Import Link from next/link
+import Banners from "@/components/Banners";
+import Service from "@/components/Service";
+import Footer from "@/components/Footer";
+import { serviceList } from "@/contants/appdata";
+import React from "react";
+import Link from "next/link";
+import booking from "../booking/page";
 
 
-// // import "../styles/blog-details.css";
+const Services = () => {
 
-// const BlogDetails = () => {
-//   const router = useRouter(); // Create a router instance
-//   const { slug } = router.query; // Access the slug from the router query
+  // const Submit = async () => {
+  //   const url = await PaymentMethod({ ...form.getValues(), price });
+  //   router.push(url);
+  // };
 
-//   const blog = blogData.find((blog) => blog.title === slug); // Find the blog data by title
-
-//   useEffect(() => {
-//     if (blog) {
-//       window.scrollTo(0, 0); // Scroll to top if blog is found
-//     }
-//   }, [blog]);
-
-//   if (!blog) return <div>Loading...</div>; // Optional loading state while fetching blog
-
-//   return (
-//     <div title={blog.title}>
-//       <h2>hi</h2>
-//       <section>
-//         <Container>
-//           <Row className="mt-4">
-//             <Col lg="8" md="8">
-//               <div className="blog__details">
-//                 <img src={blog.imgUrl} alt="" className="w-100" />
-//                 <h2 className="section__title mt-4">{blog.title}</h2>
-
-//                 <div className="blog__publisher d-flex align-items-center gap-4 mb-4">
-//                   <span className="blog__author">
-//                     <i className="ri-user-line"></i> {blog.author}
-//                   </span>
-
-//                   <span className="d-flex align-items-center gap-1 section__desc">
-//                     <i className="ri-calendar-line"></i> {blog.date}
-//                   </span>
-
-//                   <span className="d-flex align-items-center gap-1 section__desc">
-//                     <i className="ri-time-line"></i> {blog.time}
-//                   </span>
-//                 </div>
-
-//                 <p className="section__desc">{blog.description}</p>
-//                 <h6 className="ps-5 fw-normal">
-//                   <blockquote className="fs-4 blue">{blog.quote}</blockquote>
-//                 </h6>
-//                 <p className="section__desc">{blog.description}</p>
-//               </div>
-
-//               <div className="comment__list mt-5">
-//                 <h4 className="mb-5">3 Comments</h4>
-
-//                 <div className="single__comment d-flex gap-3">
-//                   <img src={commentImg} alt="" />
-//                   <div className="comment__content">
-//                     <h6 className="fw-bold blue">David Visa</h6>
-//                     <p className="section__desc mb-0">14 July, 2022</p>
-//                     <p className="section__desc">
-//                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//                       Eos nobis totam eius laborum molestias itaque minima
-//                       distinctio, quae velit tempore!
-//                     </p>
-
-//                     <span className="replay d-flex align-items-center gap-1">
-//                       <i className="ri-reply-line"></i> Reply
-//                     </span>
-//                   </div>
-//                 </div>
-
-//                 {/* =============== comment form ============ */}
-//                 <div className="leave__comment-form mt-5 blue">
-//                   <h4>Leave a Comment</h4>
-//                   <p className="section__desc">
-//                     You must sign in to make or comment on a post
-//                   </p>
-
-//                   <Form>
-//                     <FormGroup className="d-flex gap-3">
-//                       <Input type="text" placeholder="Full name" />
-//                       <Input type="email" placeholder="Email" />
-//                     </FormGroup>
-
-//                     <FormGroup>
-//                       <textarea
-//                         rows="5"
-//                         className="w-100 py-2 px-3"
-//                         placeholder="Comment..."
-//                       ></textarea>
-//                     </FormGroup>
-
-//                     <button className="btn comment__btn m-3">
-//                       Post a Comment
-//                     </button>
-//                   </Form>
-//                 </div>
-//               </div>
-//             </Col>
-
-//             <Col lg="4" md="4">
-//               <div className="recent__post mb-4">
-//                 <h5 className="fw-bold">Recent Posts</h5>
-//               </div>
-//               {blogData.map((item) => (
-//                 <div className="recent__blog-post mb-4" key={item.id}>
-//                   <div className="recent__blog-item d-flex gap-3">
-//                     <img src={item.imgUrl} alt="" className="w-25 rounded-2" />
-//                     <h6>
-//                       <Link href={`/blogs/${item.title}`}>{item.title}</Link>
-//                     </h6>
-//                   </div>
-//                 </div>
-//               ))}
-//             </Col>
-//           </Row>
-//         </Container>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default BlogDetails;
-import React from 'react';
-import { Container, Row } from 'reactstrap';
-import Helmet from '../components/Helmet/Helmet';
-import CommonSection from '../components/UI/CommonSection';
-import BlogList from '../components/UI/BlogList';
-
-const Blog = () => {
   return (
-    <Helmet title="Blogs">
-      <CommonSection title="Blogs" />
-      <section>
-        <Container>
-          <Row>
-            <BlogList /> {/* Display the blog list only once */}
-          </Row>
-        </Container>
-      </section>
-    </Helmet>
+    <div>
+     
+      <div className="h-screen bg-gradient-to-b from-[#eedcff] to-[#42275a] flex flex-col items-center justify-start ">
+        
+      <h1 className="text-4xl font-bold text-center justify-start m-6 p-4">BLOGS</h1>
+      <div className="bg-white shadow-lg rounded-lg w-3/4 md:w-1/2 lg:w-2.7/5 p-8">
+      <h2 className="text-xl font-bold justify-start my-3 py-3">What services do you require?</h2>
+        
+
+      <div className="grid grid-cols-2 m-2 p-2 gap-4">
+            {serviceList?.map((service, index) => (
+              <div 
+                key={index} 
+                className="p-1 border border-gray-300 rounded-md hover:shadow-lg transition duration-300"
+              >
+                <h2><Service service={service} /></h2>
+                {/* <h2 className="font-medium m-2 text-lg">{service.name}</h2> */}
+          
+              </div>
+            ))}
+          </div>
+          <div class=" m-4">
+          <Link href="/booking?index=1" className=" w-full flex justify-center no-underline">
+          <button className="bg-secondary-color text-white font-bold w-full max-w-md py-2.5 px-4 m-4 rounded-md
+                            hover:bg-[#5e3b4f] hover:scale-105 transition-transform duration-300 no-underline">
+            Get Started
+          </button>
+          </Link>
+          </div>
+        </div>
+    </div>
+      <div className="bg-[#42275a]">
+      
+      </div>
+      <Footer />
+   </div>
+    
   );
 };
+      {/* <div className="h-screen bg-gradient-to-b from-[#a1819c] to-[#734b6d] flex items-center justify-center">
+      <div className="bg-white shadow-lg rounded-lg w-3/4 md:w-1/2 lg:w-1/3 p-8 m-4">
+        <h1 className="text-2xl font-bold text-center mb-4">Welcome to My Website</h1>
+        <p className="text-gray-700 text-center">
+          This box is centered horizontally and vertically with padding and margin applied.
+        </p>
+      </div> */}
+    
+      {/* <Banners
+        img="/eg.jpg"
+        title="Services"
+        text="Experience elevated travel with WheelQuest: Where style, comfort, and safety meet for every occasion. Travel in sophistication and peace of mind."
+      />
+      <div className="mb-5">
+        {serviceList?.map((service, index) => (
+          <div key={index}>
+            <Service service={service} />
+          </div>
+        ))}
+      </div> */}
+   
 
-export default Blog;
+export default Services;
