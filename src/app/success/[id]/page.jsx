@@ -10,7 +10,7 @@ const Success = async ({ params }) => {
       {updateEmail && (
         <div className="flex justify-center items-center gap-10 flex-col">
           <img src="/success.png" className="w-40 h-40" />
-          <h1 className="text-4xl text-green-500">Successfull payment</h1>
+          <h1 className="text-4xl text-green-500">Successfull</h1>
         </div>
       )}
     </div>
